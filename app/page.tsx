@@ -6,14 +6,19 @@ export default function Home() {
       
       {/* Sidebar */}
       <div className='col-span-3'>
-        <h1>Logo</h1>
-        {/* Menu */}
-        <p>Menu Items</p>
+        <div className='flex flex-col p-8'>
+          <h1>Logo</h1>
+          {/* Menu */}
+          <p>Menu Items</p>
+        </div>
       </div>
       
       {/* Main */}
-      <div className='col-span-9 bg-white'>
+      <div className='col-span-9 bg-slate-300'>
         {/* Header */}
+        <div className='flex flex-col'>
+
+        </div>
 
       </div>
     
