@@ -1,26 +1,23 @@
+import Header from '@/components/header'
+import Sidebar from '@/components/sidebar'
 import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className='grid grid-cols-12 h-screen bg-blue-500'>
+    <main className='grid grid-cols-12 h-screen'>
       
       {/* Sidebar */}
-      <div className='col-span-3'>
-        <div className='flex flex-col p-8'>
-          <h1>Logo</h1>
-          {/* Menu */}
-          <p>Menu Items</p>
-        </div>
+      <div className='col-span-2 lg:col-span-3 bg-blue-500'>
+        <Sidebar />
       </div>
       
       {/* Main */}
-      <div className='col-span-9 bg-slate-300'>
+      <div className='col-span-10 lg:col-span-9 bg-slate-100'>
+        
         {/* Header */}
         <div className='flex flex-col'>
         <div className="grid gap-4">
-          <div className="col-span-12 bg-white">
-            header
-          </div>
+          <Header />
 
           {/* Projects */}
           <div className='col-span-8'>
