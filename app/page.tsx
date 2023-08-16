@@ -7,12 +7,12 @@ export default function Home() {
     <main className='grid grid-cols-12 h-screen'>
       
       {/* Sidebar */}
-      <div className='col-span-2 lg:col-span-3 bg-blue-500'>
+      <div className='col-span-2 bg-blue-500'>
         <Sidebar />
       </div>
       
       {/* Main */}
-      <div className='col-span-10 lg:col-span-9 bg-slate-100'>
+      <div className='col-span-10 bg-slate-100'>
         
         {/* Header */}
         <div className='flex flex-col'>
