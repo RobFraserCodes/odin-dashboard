@@ -25,7 +25,7 @@ export default function Header() {
         <div className='flex justify-around px-8 items-center'>
           <BellAlertIcon className='w-6 h-6 text-gray-800' />
           <div className='bg-yellow-400 rounded-full w-10 h-10'></div>
-          <p>Morgan Oakley</p>
+          <p className='font-semibold'>Morgan Oakley</p>
         </div>
         <div className='flex justify-between p-8'>
           <button className='bg-blue-500 px-4 py-2 rounded-full text-white font-semibold'>New</button>

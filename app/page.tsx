@@ -1,7 +1,12 @@
+import Announcement from '@/components/announcement'
 import Card from '@/components/card'
 import Header from '@/components/header'
 import Sidebar from '@/components/sidebar'
+import Trending from '@/components/trending'
+import { announcements } from '@/data/announcements'
 import { projects } from '@/data/projects'
+import { trending } from '@/data/trending'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -31,15 +36,20 @@ export default function Home() {
           </div>
 
           {/* Announcements & Trending */}
-          <div className='col-span-4'>
+          <div className='col-span-4 pt-8 pr-8 mb-4'>
             <div className='flex flex-col'>
-              Announcements
-              <div className='bg-white'>
-                Announcements
+              <h3 className='font-semibold mb-4'>Announcements</h3>
+              <div className='bg-white p-8 rounded-md shadow-sm'>
+                {announcements.map((announcement) => (
+                  <Announcement key={announcement.id} announcement={announcement} />
+                ))}
+
               </div>
-              Trending
-              <div className='bg-white'>
-                Trending
+              <h3 className='font-semibold my-4'>Trending</h3>
+              <div className='bg-white p-8 rounded-md shadow-sm'>\
+                      {trending.map((trend) => (
+                  <Trending key={trend.id} trend={trend} />
+                ))}
               </div>
             </div>
           </div>
@@ -48,8 +58,8 @@ export default function Home() {
         </div>
 
       {/* Footer */}
-      <div className='bg-slate-500'>
-        Footer
+      <div className='text-center pb-4 text-gray-400 text-sm'>
+        Copyright 2023. Built by <Link href="https://www.robfraser.dev"><span className='font-semibold'>Rob Fraser</span></Link> for <Link href="https://www.theodinproject.com"></Link><span className='font-semibold'>The Odin Project</span>.
       </div>
 
       </div>
