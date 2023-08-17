@@ -1,6 +1,7 @@
+import Card from '@/components/card'
 import Header from '@/components/header'
 import Sidebar from '@/components/sidebar'
-import Image from 'next/image'
+import { projects } from '@/data/projects'
 
 export default function Home() {
   return (
@@ -20,15 +21,12 @@ export default function Home() {
           <Header />
 
           {/* Projects */}
-          <div className='col-span-8'>
-            Projects
+          <div className='col-span-8 p-8'>
+            <h3 className='font-semibold mb-4'>Projects</h3>
             <div className='grid grid-cols-2 gap-4'>
-              <div className='col-span-1 bg-white'>
-                card 1
-              </div>
-              <div className='col-span-1 bg-white'>
-                card 2
-              </div>
+              {projects.map((project) => (
+                <Card key={project.id} project={project} />
+              ))}
             </div>
           </div>
 

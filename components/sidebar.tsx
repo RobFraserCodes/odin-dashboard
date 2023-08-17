@@ -7,7 +7,7 @@ import { RocketLaunchIcon } from '@heroicons/react/24/outline'
 
 export default function Sidebar() {
   return (
-    <div className='flex flex-col p-4 lg:p-8 text-white h-screen justify-between shadow-md'>
+    <div className='flex flex-col p-4 lg:p-8 text-white h-screen justify-between border-r-2 '>
         {/* Logo */}
         <div className='flex flex-row justify-center lg:justify-normal mt-4 hover:bg-blue-600'>
             <RocketLaunchIcon className='w-6 h-6 stroke-2'/>
