@@ -1,7 +1,14 @@
 import React from 'react'
 import Share from './sharing'
 
-export default function Card({ project: { title, description } }) {
+interface Props {
+    project: {
+        title: string;
+        description: string;
+    }
+}
+
+export default function Card({ project: { title, description } }: Props) {
   return (
     <div className='col-span-2 md:col-span-1 bg-white pt-8 px-4 rounded-md shadow-sm border-l-8 border-yellow-400'>
         <h3 className='font-semibold'>{title}</h3>

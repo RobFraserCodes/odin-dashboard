@@ -1,6 +1,11 @@
 import React from 'react'
+import { Announcement as AnnouncementType } from '@/types/types'
 
-export default function Announcement({ announcement: { title, description }}) {
+interface Props {
+    announcement: AnnouncementType;
+}
+
+export default function Announcement({ announcement: { title, description }}: Props) {
   return (
     <div>
         <h3 className='font-semibold'>{title}</h3>

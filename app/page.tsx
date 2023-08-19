@@ -46,7 +46,7 @@ export default function Home() {
 
               </div>
               <h3 className='font-semibold my-4'>Trending</h3>
-              <div className='bg-white p-8 rounded-md shadow-sm'>\
+              <div className='bg-white p-8 rounded-md shadow-sm'>
                       {trending.map((trend) => (
                   <Trending key={trend.id} trend={trend} />
                 ))}

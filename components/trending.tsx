@@ -1,7 +1,15 @@
 import React from 'react'
 import Image from 'next/image'
 
-export default function Trending({trend: { title, image, user }}) {
+interface Props {
+    trend: {
+        title: string;
+        image: string;
+        user: string;
+    }
+}
+
+export default function Trending({trend: { title, image, user }}: Props) {
   return (
     <div className='flex items-center py-4'>
         <Image src={image} alt={title} width={80} height={80} className='rounded-full' />
